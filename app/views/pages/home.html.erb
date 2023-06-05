@@ -12,6 +12,8 @@
         <td><%= pet.breed %></td>
         <td><%= pet.description %></td>
         <td><%= link_to "Book now", pet %></td>
+        <td><%= link_to "pet details", pet_path(pet) %></td>
+
         <%# <td><%= link_to "Cancel", booking, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
       </tr>
     <% end %>
