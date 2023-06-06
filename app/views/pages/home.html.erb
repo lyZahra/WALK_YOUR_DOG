@@ -1,16 +1,5 @@
 <%# <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p> %>
-<<<<<<< HEAD
-<h1>Walk My Dog</h1>
-<tbody>
-  <% @pets.each do |pet| %>
-    <div class="row display-flex space-between">
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Pomeranian.JPG" alt="cute dog">
-          <p>
-          <h3 ><%= pet.name %></h3>
-=======
 <div class="container">
   <div class="wrapper">
    <% @pets.each do |pet| %>
@@ -21,19 +10,13 @@
           <h3 ><%= link_to pet.name,  pet_path(pet)  %></h3>
         </div>
         <div>
->>>>>>> 45bca73811ad7e9ed4968eea168837e3fd9b7f89
-          <h2><%= pet.breed %></h2>
+           <h2 ><%= link_to pet.breed,  pet_path(pet)  %></h2>
         </div>
         <div style="white-space: nowrap; width: 17rem; overflow: hidden; text-overflow: ellipsis;">
-          <%= pet.description %>
+         <%= link_to pet.description,  pet_path(pet)  %>
         </div>
       </div>
       </div>
     <% end %>
   </div>
-<<<<<<< HEAD
-  <% end %>
-</tbody>
-=======
 </div>
->>>>>>> 45bca73811ad7e9ed4968eea168837e3fd9b7f89
