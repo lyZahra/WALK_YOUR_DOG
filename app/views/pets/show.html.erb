@@ -22,8 +22,8 @@
               <p>&nbsp<%= @pet.user.name %></p>
             </div>
             <div class="media">
-              <label>Average rating:</label><br>
-              <p>&nbsp /5</p>
+              <label>Average rating:&nbsp</label><br>
+              <p> <%= @pet.average_rating %></p>
             </div>
             <a href="<%= new_pet_booking_path(@pet) %>" class="btn btn-info">Book now</a>
           </div>
