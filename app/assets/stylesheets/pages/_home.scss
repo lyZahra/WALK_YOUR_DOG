@@ -8,7 +8,7 @@ body {
   display: grid;
   margin-top: 18px;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  // grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   width: 70%;
 }
@@ -66,4 +66,3 @@ body {
 .form-control {
   background-color: #F7F1E3;
 }
-
