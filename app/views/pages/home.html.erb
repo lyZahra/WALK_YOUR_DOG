@@ -6,12 +6,12 @@
     </div>
 </div>
 
-<div class="row">
-  <div class="wrapper d-flex">
+<div style="width: 100vw;">
+  <div class="wrapper p4-3">
     <% @pets.each do |pet| %>
-      <%= link_to pet_path(pet) do %>
         <div class="col-sm-4">
           <div class="pet-card">
+             <%= link_to pet_path(pet) do %>
             <%# <img class="card-img-" src="https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png" alt="cute dog"> %>
             <div class="image-div" style="background-image: url('<%= cl_image_path pet.photo.key %>')">
               <%# <% if pet.photo.key.present? %>
