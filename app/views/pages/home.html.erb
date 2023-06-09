@@ -6,42 +6,44 @@
     </div>
 </div>
 
-<body>
-  <div class="wrapper">
+<div class="row">
+  <div class="wrapper d-flex">
     <% @pets.each do |pet| %>
-    <div class="col-sm">
-      <div class="pet-card">
-        <%# <img class="card-img-" src="https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png" alt="cute dog"> %>
-        <div class="image-div" style="background-image: url('<%= cl_image_path pet.photo.key %>')">
-          <%# <% if pet.photo.key.present? %>
-          <%# <%= cl_image_tag pet.photo.key, height: 300 , width: 320 , crop: :fill %>
-          <%# <% else  %>
-          <%# <img src="https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png" alt="dog icon">
-          <% end %>
-          </div>
-          <div>
-            <h3 class="text-center" style="color: #FF793F;"><%= link_to pet.name,  pet_path(pet) %></h3>
-          </div>
-        <div class="info">
-          <div>
-            <p><%= pet.breed %></p>
-          </div>
-          <div>
-            <%# <label>Average rating:</label><br> %>
-            <% if pet.average_rating.to_f > 0 %>
-              <p>&nbsp <% pet.average_rating.floor.times do %>
-              <i class="fa-solid fa-star" style="color: #ffb142;"></i>
-              <%# <i class="fa-solid fa-star-half" style="color: #ffb142;"></i> %>
+      <%= link_to pet_path(pet) do %>
+        <div class="col-sm-4">
+          <div class="pet-card">
+            <%# <img class="card-img-" src="https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png" alt="cute dog"> %>
+            <div class="image-div" style="background-image: url('<%= cl_image_path pet.photo.key %>')">
+              <%# <% if pet.photo.key.present? %>
+              <%# <%= cl_image_tag pet.photo.key, height: 300 , width: 320 , crop: :fill %>
+              <%# <% else  %>
+              <%# <img src="https://pupuphooray.com/wp-content/uploads/2019/03/dog-icon.png" alt="dog icon">
               <% end %>
-              </p>
-            <% end %>
+              </div>
+              <div>
+                <h3 class="text-center" style="color: #FF793F;"><%= link_to pet.name,  pet_path(pet) %></h3>
+              </div>
+            <div class="info">
+              <div>
+                <p><%= pet.breed %></p>
+              </div>
+              <div>
+                <%# <label>Average rating:</label><br> %>
+                <% if pet.average_rating.to_f > 0 %>
+                  <p>&nbsp <% pet.average_rating.floor.times do %>
+                  <i class="fa-solid fa-star" style="color: #ffb142;"></i>
+                  <%# <i class="fa-solid fa-star-half" style="color: #ffb142;"></i> %>
+                  <% end %>
+                  </p>
+                <% end %>
+            </div>
+              <%# <div style="white-space: nowrap; width: 17rem; overflow: hidden; text-overflow: ellipsis;">
+                <%= link_to pet.description,  pet_path(pet)  %>
+              <%# </div> %>
+            </div>
+          </div>
         </div>
-          <%# <div style="white-space: nowrap; width: 17rem; overflow: hidden; text-overflow: ellipsis;">
-            <%= link_to pet.description,  pet_path(pet)  %>
-          <%# </div> %>
-        </div>
-      </div>
-    </div>
+      <% end %>
     <% end %>
   </div>
-</body>
+</div>

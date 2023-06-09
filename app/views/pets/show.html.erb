@@ -32,6 +32,16 @@
             <label>Average rating:&nbsp</label><br>
             <p> <%= @pet.average_rating %></p>
           </div>
+          <div class="media">
+            <p> <% if @existing_reviews.last != nil %>
+                   <label>Latest Review:</label><br>
+                   <%= @existing_reviews.last %>
+                <% else %>
+
+                <% end %>
+
+            </p>
+          </div>
 
           </br>
 

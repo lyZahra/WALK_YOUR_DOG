@@ -49,7 +49,7 @@ end
 
 bella_file = URI.open("https://source.unsplash.com/random/?dog")
 
-bella = Pet.new(name: "Bella", availability: true, breed: "poodle", description: "cuddling and love chicken", address: "New York")
+bella = Pet.new(name: "Bella", availability: true, breed: "poodle", description: "cuddling and love chicken", address: "Hamburg")
 bella.user = juliette
 bella.photo.attach(io: bella_file, filename: "bella.png", content_type: "image/png")
 bella.save
