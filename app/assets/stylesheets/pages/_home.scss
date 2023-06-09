@@ -10,7 +10,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  width: 70%;
+  // width: 70%;
 }
 
 .pet-card {
@@ -66,4 +66,3 @@ body {
 .form-control {
   background-color: #F7F1E3;
 }
-
