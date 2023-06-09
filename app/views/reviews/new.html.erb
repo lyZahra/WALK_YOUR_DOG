@@ -1,6 +1,7 @@
-<h1>New review</h1>
+<h4>New review</h4>
 <%= simple_form_for [@booking, @review] do |f| %>
-  <%= f.input :rating , collection: 1..5, as: :radio_buttons %>
-  <%= f.input :comment %>
+  <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience", input_html: {data: {controller: "star-rating"}} %>  <%= f.input :comment %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <%# redirect to pet show page %>
+  <%# <%= link_to "Back to ", pet_path(@pet) %>
 <% end %>
