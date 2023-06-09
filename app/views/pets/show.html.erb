@@ -33,11 +33,11 @@
             <p> <%= @pet.average_rating %></p>
           </div>
           <div class="media">
-            <label>Latest Review:</label><br>
             <p> <% if @existing_reviews == nil %>
                    <%= @pet.name " doesn't have any reviews yet" %>
                 <% else %>
-                   <%= @existing_reviews.last %>
+                  <label>Latest Review:</label><br>
+                    <%= @existing_reviews.last %>
                 <% end %>
             </p>
           </div>
