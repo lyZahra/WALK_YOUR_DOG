@@ -4,17 +4,22 @@
   padding: 200px 0;
   height: 100px;
   width: 100%;
-  background-image: url('banner.png');
+  background-image: url('image.png');
 }
 
+.image-banner {
+  filter: brightness(50%);
+}
 .banner h1 {
   color: white;
+  font-size: 60px;
+  text-shadow: black;
 }
 
-.banner-p {
+.banner p {
   color: white;
-  opacity: .7;
-  font-size: 20px;
+  font-size: 40px;
+  text-shadow: black;
 }
 
 .container {

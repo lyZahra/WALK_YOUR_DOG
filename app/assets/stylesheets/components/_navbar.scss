@@ -1,5 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
+  background: #FFB142;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,15 +16,10 @@
   height: 50px;
 }
 
-.navbar h2 {
-  color: white;
-}
-
-
 .nav-link {
-  color: #FFB142;
+  color: black;
 }
 
 .nav-link:hover {
-  color: #FF793F;
+  color: #FFB142;
 }
