@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
     @review.booking = @booking
     authorize @review
     if @review.save
-      redirect_to booking_path(@booking)
+      redirect_to pet_path(@booking.pet)
     else
       render :new, status: :unprocessable_entity
     end

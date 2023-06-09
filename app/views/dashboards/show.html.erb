@@ -38,8 +38,7 @@
   </div>
 
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <div class="mt-4 mb-4 bg-white">
-      <h3>Requests about my dogs</h3>
+    <div class="mt-4 mb-4 pb-4">
       <% if @bookings_for_my_dogs.empty? %>
         <p>You have no pets yet</p>
         <p>Become a Dog's mum or dad</p>
@@ -55,6 +54,7 @@
               <th scope="col">Walker's infos</th>
               <th scope="col">Request's status</th>
               <th scope="col">Confirmation</th>
+              <th scope="col">Reviews</th>
             </tr>
           </thead>
 
@@ -73,6 +73,10 @@
                   <%= f.submit class: "btn btn-dark btn-sm rounded-pill" %>
                   <% end %>
                 </td>
+                <td>
+                <%= link_to "Your Dog's Reviews", pet_path(booking.pet) %>
+                </td>
+                <td>
               </tr>
             <% end %>
           </tbody>
@@ -83,8 +87,7 @@
   </div>
 
   <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-    <div class="col mt-4 mb-4">
-      <h3>Your requests to book other dogs</h3>
+    <div class="col mt-4 mb-4 pb-4">
 
         <table class="table">
             <thead>
@@ -95,6 +98,7 @@
                 <th scope="col">Owner's infos</th>
                 <th scope="col">Request's status</th>
                 <th scope="col">#</th>
+                <th scope="col">Add a new review</th>
               </tr>
             </thead>
 
@@ -116,6 +120,8 @@
                   <% else booking.status == "completed" %>
                     <i class="fa-solid fa-check" style="color: #666666;"></i>
                   <% end %>
+                  </td>
+                  <td><%= link_to "Add a review", new_booking_review_path(booking) %>
                   </td>
                 </tr>
               <% end %>
