@@ -17,7 +17,7 @@
         </div>
 
         <div class="col-sm-6">
-          <h1 class="dark-color"><%= @pet.name %></h1>
+          <h1 class="dark-color" style="color: #227093;"><%= @pet.name %></h1>
           <h2 class="theme-color lead">Breed: <%= @pet.breed.capitalize %> </h2>
           <p>"<%= @pet.description %>"</p>
           <div class="media">
@@ -30,7 +30,7 @@
           </div>
           <div class="media">
             <label>Average rating:&nbsp</label><br>
-            <p> <%= @pet.average_rating %></p>
+            <p> <%= @pet.average_rating.round(1) %></p>
           </div>
           <div class="media">
             <p> <% if @existing_reviews.last != nil %>

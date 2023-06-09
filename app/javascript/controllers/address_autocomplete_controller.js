@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder"
+import oxGeocoder from "@ox/ox-gl-geocoder"
 
 // Connects to data-controller="address-autocomplete"
 export default class extends Controller {
@@ -8,7 +8,7 @@ export default class extends Controller {
   static targets = ["address"]
 
   connect() {
-    this.geocoder = new MapboxGeocoder({
+    this.geocoder = new oxGeocoder({
       accessToken: this.apiKeyValue,
       types: "country,region,place,postcode,locality,neighborhood,address"
     })
