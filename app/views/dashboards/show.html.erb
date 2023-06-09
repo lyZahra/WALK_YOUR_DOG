@@ -67,7 +67,7 @@
                 <td><%= booking.user.email%></td>
                 <td>
                   <%= simple_form_for(booking) do |f| %>
-                  <%= f.input :status, collection: ["pending", "accepted", "denied", "completed"], input_html: {class: "btn-light btn-sm"} %>
+                  <%= f.input :status, collection: ["pending", "accepted", "denied", "completed"],label: false, input_html: {class: "btn-light btn-sm"} %>
                 </td>
                 <td>
                   <%= f.submit class: "btn btn-dark btn-sm rounded-pill" %>
@@ -76,7 +76,6 @@
                 <td>
                 <%= link_to "Your Dog's Reviews", pet_path(booking.pet) %>
                 </td>
-                <td>
               </tr>
             <% end %>
           </tbody>
