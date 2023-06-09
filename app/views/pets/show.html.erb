@@ -29,8 +29,12 @@
             <p>&nbsp<%= @pet.address %></p>
           </div>
           <div class="media">
+          <% if @pet.average_rating.to_f > 0%>
             <label>Average rating:&nbsp</label><br>
             <p> <%= @pet.average_rating.round(1) %></p>
+            <% else %>
+            <%= @pet.average_rating %>
+            <% end %>
           </div>
           <div class="media">
             <p> <% if @existing_reviews.last != nil %>
